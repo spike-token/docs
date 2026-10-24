@@ -1,6 +1,5 @@
 // Send ERG to a wallet (testnet). Pass height from your node/wallet provider.
-import { OutputBuilder, TransactionBuilder, RECOMMENDED_MIN_FEE_VALUE } from "@fleet-sdk/builder";
-import { Box, ErgoAddress } from "@fleet-sdk/common";
+import { ErgoAddress, OutputBuilder, RECOMMENDED_MIN_FEE_VALUE, TransactionBuilder, type Box } from "@fleet-sdk/core";
 
 export function sendToWallet(
   inputs: Box<string>[],

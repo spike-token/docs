@@ -7,7 +7,7 @@
 ## Prerequisites
 
 ```bash
-npm i @fleet-sdk/builder @fleet-sdk/common
+npm i @fleet-sdk/core
 ```
 
 Use testnet and a funded test mnemonic. Never hardcode mainnet keys.
@@ -17,8 +17,7 @@ Use testnet and a funded test mnemonic. Never hardcode mainnet keys.
 Pass unspent input boxes and the current chain height from your provider or wallet. Full snippet: `docs/tutorial/_snippets/send-to-wallet.ts`.
 
 ```ts
-import { OutputBuilder, TransactionBuilder, RECOMMENDED_MIN_FEE_VALUE } from "@fleet-sdk/builder";
-import { ErgoAddress, Box } from "@fleet-sdk/common";
+import { ErgoAddress, OutputBuilder, RECOMMENDED_MIN_FEE_VALUE, TransactionBuilder, type Box } from "@fleet-sdk/core";
 
 export function sendToWallet(
   inputs: Box<string>[],
